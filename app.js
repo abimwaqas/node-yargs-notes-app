@@ -10,6 +10,12 @@ const titleOptions = {
     alias: 't',
     type: 'string'
   };
+  const authorOptions = {
+    describe: 'Name of Author note',
+    demand: true,
+    alias: 'a',
+    type: 'string'
+  };
   const bodyOptions = {
     describe: 'Body of note',
     demand: true,
@@ -19,6 +25,7 @@ const titleOptions = {
 const argv = yargs
   .command('add', 'Add a new note', {
     title: titleOptions,
+    author: authorOptions,
     body: bodyOptions
   })
   .command('list', 'list all notes')
@@ -33,9 +40,10 @@ const argv = yargs
 
   if (command === 'add') {
       var title = argv.title.trim();
+      var author = argv.author.trim();
       var body = argv.body.trim();
-      if(!validator.isEmpty(title) && !validator.isEmpty(body)){
-        var note = notes.addNote(argv.title, argv.body);
+      if(!validator.isEmpty(title) && !validator.isEmpty(author) && !validator.isEmpty(body)){
+        var note = notes.addNote(argv.title, argv.author, argv.body);
         if (note) {
         console.log('Note created');
         notes.logNote(note);

@@ -1,0 +1,24 @@
+{
+  "name": "yargs-notes-app",
+  "version": "1.0.0",
+  "description": "Assignment\r Build using Node, Yargs, Validator, lodash and node cli",
+  "main": "app.js",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "validator": "^10.11.0",
+    "yargs": "^13.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abimwaqas/node-yargs-notes-app.git"
+  },
+  "author": "Abi Waqas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abimwaqas/node-yargs-notes-app/issues"
+  },
+  "homepage": "https://github.com/abimwaqas/node-yargs-notes-app#readme"
+}

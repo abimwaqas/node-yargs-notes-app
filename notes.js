@@ -14,10 +14,11 @@ var saveNotes = (notes) => {
 };
 
 
-var addNote = (title, body) => {
+var addNote = (title, author, body) => {
   var notes = fetchNotes();
   var note = {
     title,
+    author,
     body
   };
 
@@ -55,6 +56,7 @@ var logNote = (note) => {
   debugger;
   console.log('--');
   console.log(`Title: ${note.title}`);
+  console.log(`Author: ${note.author}`);
   console.log(`Body: ${note.body}`);
 };
 
